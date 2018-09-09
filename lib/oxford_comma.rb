@@ -14,5 +14,6 @@ def oxford_comma(array)
         rtn_str << "and #{word}"
       end
     end
+    rtn_str
   end
 end
