@@ -4,8 +4,14 @@ def oxford_comma(array)
   elsif array.count == 2
     array[0] + " and " + array[1]
   elsif array.count == 3
-    "#{array[0]}, #{array[1]} and #{array[2]}"
+    "#{array[0]}, #{array[1]}, and #{array[2]}"
   else
-    
+    rtn_str = ""
+    array.each_with_index do |word,index|
+      if index < array.count
+        rtn_str << "#{word}, "
+      else
+        rtn_str << "and #{word}"
+      end
   end
 end
